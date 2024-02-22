@@ -3,5 +3,5 @@
 }
 
 .solid {
-    @apply border-none bg-gray-300
+    @apply border-none bg-[#f5f5f5]
 }
