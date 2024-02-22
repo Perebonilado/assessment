@@ -4,14 +4,16 @@ import { PayrollCardDetails } from "@/models/PayrollCardDetails";
 
 export default function Home() {
   return (
-    <Container className="!max-w-5xl mx-auto pt-10">
-      <PayrollCard
-        payrollType="Regular"
-        dueDate={new Date()}
-        paymentFrequency="Bi-Weekly #5"
-        data={payrollCardData}
-      />
-    </Container>
+    <main className="px-2">
+      <Container className="!max-w-5xl mx-auto pt-10 ">
+        <PayrollCard
+          payrollType="Regular"
+          dueDate={new Date()}
+          paymentFrequency="Bi-Weekly #5"
+          data={payrollCardData}
+        />
+      </Container>
+    </main>
   );
 }
 
@@ -28,6 +30,6 @@ const payrollCardData: Record<string, PayrollCardDetails> = {
   "Total Additional Hours": {
     body: 600,
     fieldType: "plainNumber",
-    isBodyGreyed: true
+    isBodyGreyed: true,
   },
 };
