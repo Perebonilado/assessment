@@ -1,15 +1,21 @@
 import React, { HTMLAttributes, forwardRef } from "react";
 import Card from "./Card";
 import PayrollCardHeader from "./PayrollCardHeader";
+import PayrollCardContent from "./PayrollCardContent";
+import { PayrollCardDetails } from "@/models/PayrollCardDetails";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   payrollType: string;
   dueDate: Date;
   paymentFrequency: string;
+  data: Record<
+    string,
+    PayrollCardDetails
+  >;
 }
 
 const PayrollCard = forwardRef<HTMLDivElement, Props>(
-  ({ payrollType, paymentFrequency, dueDate, ...props }, ref) => {
+  ({ payrollType, paymentFrequency, dueDate, data, ...props }, ref) => {
     return (
       <Card ref={ref} {...props}>
         <PayrollCardHeader
@@ -17,7 +23,7 @@ const PayrollCard = forwardRef<HTMLDivElement, Props>(
           payrollType={payrollType}
           dueDate={dueDate}
         />
-        <Card variant="solid"></Card>
+        <PayrollCardContent data={data} />
       </Card>
     );
   }

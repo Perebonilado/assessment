@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import Chip from "./Chip/Chip";
-import moment from "moment";
+
 import Button from "./Button";
+import { formatDate } from "@/utils";
 
 interface Props {
   payrollType: string;
@@ -14,7 +15,7 @@ const PayrollCardHeader: FC<Props> = ({
   paymentFrequency,
   dueDate,
 }) => {
-  const formattedDueDate = `Due ${moment.utc(dueDate).format("DD/MM/YYYY")}`;
+  const formattedDueDate = `Due ${formatDate(dueDate)}`;
 
   return (
     <div className="flex items-start mb-4">
