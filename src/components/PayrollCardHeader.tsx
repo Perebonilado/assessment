@@ -24,9 +24,9 @@ const PayrollCardHeader: FC<Props> = ({
   const formattedDueDate = `Due ${formatDate(dueDate)}`;
 
   return (
-    <div className="flex items-start gap-2 mb-4 max-md:flex-col max-sm:items-center max-sm:text-center">
-      <div style={{ flex: 1 }} className="flex flex-col max-md:gap-2">
-        <div className="flex items-center gap-6 max-sm:flex-col">
+    <div className="flex items-start gap-2 mb-4 max-sm:mb-8 max-md:flex-col max-sm:items-center max-sm:text-center">
+      <div style={{ flex: 1 }} className="flex flex-col max-md:gap-2 max-sm:mb-4">
+        <div className="flex items-center gap-6 max-sm:flex-col max-sm:gap-2">
           <h3 className="text-xl text-[#505050] font-medium">{payrollType}</h3>
           <Chip header={formattedDueDate} />
         </div>
