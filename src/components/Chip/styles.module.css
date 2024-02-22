@@ -1,0 +1,19 @@
+.root {
+    @apply font-bold rounded-full w-fit
+}
+
+.small {
+  @apply text-sm px-3 py-1;
+}
+
+.medium {
+  @apply text-base px-4 py-1;
+}
+
+.large {
+  @apply text-lg px-8 py-3;
+}
+
+.primary {
+    @apply bg-[#ecf0ff] text-[#3b4f93]
+}

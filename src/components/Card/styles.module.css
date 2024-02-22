@@ -1,0 +1,7 @@
+.outlined {
+    @apply border-2 bg-none
+}
+
+.solid {
+    @apply border-none bg-gray-300
+}
