@@ -8,12 +8,18 @@ interface Props {
   payrollType: string;
   dueDate: Date;
   paymentFrequency: string;
+  handleThingsToDo?: () => void;
+  handleManagePayRoll?: () => void;
+  handleCalculatePayRoll?: () => void;
 }
 
 const PayrollCardHeader: FC<Props> = ({
   payrollType,
   paymentFrequency,
   dueDate,
+  handleCalculatePayRoll,
+  handleManagePayRoll,
+  handleThingsToDo,
 }) => {
   const formattedDueDate = `Due ${formatDate(dueDate)}`;
 
@@ -28,10 +34,25 @@ const PayrollCardHeader: FC<Props> = ({
           {paymentFrequency}
         </h4>
       </div>
-      <div style={{ flex: 2 }} className="flex justify-end items-center gap-6 max-sm:flex-col">
-        <Button title="Things to do (12)" variant="text" />
-        <Button title="Manage payroll" variant="outlined" />
-        <Button title="Calculate Payroll" variant="contained" />
+      <div
+        style={{ flex: 2 }}
+        className="flex justify-end items-center gap-6 max-sm:flex-col"
+      >
+        <Button
+          title="Things to do (12)"
+          variant="text"
+          onClick={handleThingsToDo}
+        />
+        <Button
+          title="Manage payroll"
+          variant="outlined"
+          onClick={handleManagePayRoll}
+        />
+        <Button
+          title="Calculate Payroll"
+          variant="contained"
+          onClick={handleCalculatePayRoll}
+        />
       </div>
     </div>
   );
