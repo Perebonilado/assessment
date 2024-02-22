@@ -1,9 +1,12 @@
+import AppHead from "@/components/AppHead";
 import Container from "@/components/Container";
 import PayrollCard from "@/components/PayrollCard";
 import { PayrollCardDetails } from "@/models/PayrollCardDetails";
 
 export default function Home() {
   return (
+    <>
+    <AppHead title="Payroll App"/>
     <main className="px-2">
       <Container className="!max-w-5xl mx-auto pt-10 ">
         <PayrollCard
@@ -14,6 +17,7 @@ export default function Home() {
         />
       </Container>
     </main>
+    </>
   );
 }
 
