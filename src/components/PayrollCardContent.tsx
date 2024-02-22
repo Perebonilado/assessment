@@ -10,7 +10,7 @@ interface Props {
 const PayrollCardContent: FC<Props> = ({ data }) => {
   return (
     <Card variant="solid">
-      <div className="flex gap-8">
+      <div className="grid grid-cols-4 gap-10">
         {Object.entries(data).map(
           ([header, { body, subContent, isBodyGreyed, fieldType }], key) => {
             return (

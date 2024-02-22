@@ -4,7 +4,7 @@ import { PayrollCardDetails } from "@/models/PayrollCardDetails";
 
 export default function Home() {
   return (
-    <Container className="!max-w-4xl mx-auto pt-10">
+    <Container className="!max-w-5xl mx-auto pt-10">
       <PayrollCard
         payrollType="Regular"
         dueDate={new Date()}

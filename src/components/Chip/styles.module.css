@@ -1,5 +1,5 @@
 .root {
-    @apply font-bold rounded-full w-fit
+    @apply font-semibold rounded-full w-fit
 }
 
 .small {

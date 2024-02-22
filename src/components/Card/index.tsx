@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 const Card = forwardRef<HTMLDivElement, PropsWithChildren<Props>>(
   ({ children, variant = "outlined", ...props }, ref) => {
-    const rootClassName = cn(`rounded-lg py-6 px-8`, {
+    const rootClassName = cn(`rounded-xl py-5 px-8`, {
       [s.outlined]: variant === "outlined",
       [s.solid]: variant === "solid",
     });
